@@ -72,6 +72,9 @@ class Board:
                         square.occupying_piece = Pawn(
                             (x, y), 'white' if piece[0] == 'w' else 'black', self)
 
+
+
+
     def handle_click(self, mx, my):
         x = mx // self.tile_width
         y = my // self.tile_height
@@ -136,6 +139,7 @@ class Board:
             if self.is_in_check(color):
                 output = True
         return output
+
 
     def draw(self, display):
         if self.selected_piece is not None:
